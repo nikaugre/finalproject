@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>E-Book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header class="lang">
+        <nav class="navbar navbar-expand-lg navbar" style="margin-left: 10px;">
+            <div class="container-fluid">
+                <a href="main.html">
+                    <img src="./pic/1.png" alt="" width="50" height="50" >
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active lang" aria-current="page" href="main.html" key="home">მთავარი</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle lang" href="#" key="category" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      კატეგორია
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item lang" key="book_list1" href="#">ინფორმაციული ტექნოლოგიები</a></li>
+                      <li><a class="dropdown-item lang" key="book_list2" href="#">სამშენებლო</a></li>
+                      <li><a class="dropdown-item lang" key="book_list3" href="#">ენერგეტიკა</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active lang" aria-current="page" href="#" key="about">ჩვენს შესახებ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active lang" aria-current="page" href="#" key="contact">კონტაქტი</a>
+                  </li>
+                </ul>
+                <div>
+                  <a href="#ge" class="translate style_lang1" id="ge">GE</a>
+                  <a href="#en" class="translate style_lang2" id="en">EN</a>
+                </div>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle"  href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                            </svg>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item lang" key="log-in" href="log-in.html">შესვლა</a></li>
+                          <li><a class="dropdown-item lang" key="reg" href="registration.html">რეგისტრაცია</a></li>
+                        </ul>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="box-shadow: none;">
+                      <a class="navbar-brand search-button" href="#" style="text-align: center">
+                          <img src="./pic/search.png" alt="" width="20" height="20">
+                      </a>
+                  </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div style="height: 65px; position: relative;"></div>
+        <!--Slider-->
+      <div id="slider">
+        <div class="slide">
+          <img src="./pic/slide-1.png"  class="img1">
+        </div>
+
+        <div class="slide">
+          <img src=".pic/slide-2.png" class="img1">
+        </div>
+
+        <div class="slide">
+          <img src="./pic/slide-3.png" class="img1">
+        </div>
+
+        <div class="slide">
+          <img src="./pic/slide-4.png" class="img1">
+        </div>
+        <div id="dots-con">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <!--Controlling arrows-->
+        <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+          </svg>
+        </span>
+        <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+          </svg>
+        </span>
+        </div>
+
+        <!--Books Area-->
+
+        <h5 class="col lang" key="new_book" >ინფორმაციული ტექნოლოგიები</h5>
+        <div class="row resources " style="width: 100%;">
+          <div class="container" id="resource-slider">
+            <button class='arrow prev'></button>
+            <button class='arrow next'></button>
+            <div class="resource-slider-frame">
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/Javascript.pdf" target="_blank">
+                      <img src="./pic_books/js.jpg" alt="" style="width: 200px; height: 200px;">
+
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/angular.pdf" target="_blank">
+                      <img src="./pic_books/angular.png" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/HTML5_CSS3.pdf" target="_blank">
+                      <img src="./pic_books/html_css.jpg" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/Python_g_janelidze.pdf" target="_blank">
+                      <img src="./pic_books/python.png" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/SQL_Serveri_1.pdf" target="_blank">
+                      <img src="./pic_books/sql.jpg" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/SQL_Serveri_1.pdf" target="_blank">
+                      <img src="./pic_books/php.png" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/java.pdf" target="_blank">
+                      <img src="./pic_books/java.jpg" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/Samxaraze_C++.pdf" target="_blank">
+                      <img src="./pic_books/c++.jpg" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resource-slider-item">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                    <a href="./pdf/c.pdf" target="_blank">
+                      <img src="./pic_books/C3.jpg" alt="" style="width: 200px; height: 200px;">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<hr>
+
+<h5 class="col lang" key="new_book2" >სამშენებლო</h5>
+<div class="row resources1 " style="width: 100%;">
+  <div class="container1" id="resource-slider1">
+    <button class='arrow1 prev1'></button>
+    <button class='arrow1 next1'></button>
+    <div class="resource-slider-frame1">
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/menagment.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/menegment.png" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/amwe_transporti.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/amwe.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/autocad.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/auto.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/archicad.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/archicad.png" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/hydro.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/hydro.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/msh,martvis.safudzvlebi.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/msh-safudzvlebi.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/liandagi.mowyoba.yrilis.ferdobi.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/rail.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-slider-item1">
+        <div class="resource-slider-inset1">
+          <div class="resource1">
+            <a href="./pdf//samsheneblo/tbofizika.pdf" target="_blank">
+              <img src="./pic_books/samsheneblo/ht.jpg" alt="" style="width: 200px; height: 200px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<hr>
+          <!-- Footer -->
+          <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color:rgb(45, 54, 61); color: white;">
+              © 2021 Copyright:
+              <a href="E-Book.com" style="color: white;text-decoration: none;">E-Book.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+        <script src="slider.js">
+          changeSlide()
+        </script>
+
+
+
+    <script src="multi_language.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  </body>
+</html>
+
